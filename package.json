@@ -1,0 +1,22 @@
+{
+  "name": "@prod455/meta",
+  "version": "0.1.0",
+  "description": "Graph API da Meta (Instagram, Facebook, WhatsApp Cloud, Marketing) para Node e Workers: cliente com appsecret_proof e token fora da URL, login com token de longa duração e webhook com X-Hub-Signature-256. Só WebCrypto e fetch.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" }
+  },
+  "files": ["dist"],
+  "sideEffects": false,
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test test/*.test.ts",
+    "check": "tsc -p tsconfig.json --noEmit && node --test test/*.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": ">=22",
+    "typescript": ">=5.7"
+  }
+}
